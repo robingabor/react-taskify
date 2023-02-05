@@ -1,0 +1,43 @@
+let name: string;
+let age: number;
+let isStudent:boolean;
+let winners:number[];
+
+// Tuple
+let role: [number,string];
+
+// Object
+let example:Object;
+
+// Type Alias : technically it is not a new type, we only creating a new name for a type
+type Person = {
+  name:string,
+  age?:number
+}
+// Type can extend an other type :O wooooooow
+// both type alias and interface can extend each other: extends , &   :O woooooow
+type Human = Person & {
+  eye: boolean,
+  age: number
+}
+// object
+let person:Person = {name:'Robin', age:23}
+
+// array of Person
+let arrayPerson: Person[];
+
+type Constans = 'adfl' | 'dasg' | 'aafdkdv';
+let contAns:Constans  = 'adfl';
+
+// define functions
+let printName: (name:string) => void;
+
+// Interface
+interface Individual {
+  name:string,
+  age?:number
+}
+
+interface Guy extends Individual {
+  profession:string
+}
